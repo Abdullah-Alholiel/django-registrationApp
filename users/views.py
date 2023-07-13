@@ -25,7 +25,6 @@ def register(request):
                 address=form.cleaned_data['address'],
                 city=form.cleaned_data['city'],
                 country=form.cleaned_data['country'],
-                photo=form.cleaned_data['photo']
             )
             messages.success(request, f'Your account has been created! Now you can login!')
             login(request, user)
