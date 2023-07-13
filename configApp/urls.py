@@ -19,14 +19,15 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path
-
+from users import views as user_views
 
 
 
 urlpatterns = [
     path('', include('WebApp.urls')),
     path('admin/', admin.site.urls),
-
+    path('users/', include('users.urls', namespace='users')),
+    path('register/', user_views.register, name='register'),
 
 
 
